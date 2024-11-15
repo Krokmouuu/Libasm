@@ -20,7 +20,7 @@ ASM_SOURCES = $(wildcard $(SRC_DIR)/*.s)
 ASM_OBJECTS = $(patsubst $(SRC_DIR)/%.s, $(OBJ_DIR)/%.o, $(ASM_SOURCES))
 
 # Règles
-all: $(BIN_DIR)/$(TARGET)
+all: $(BIN_DIR)/$(TARGET) $(EXEC)
 
 $(BIN_DIR)/$(TARGET): $(ASM_OBJECTS)
 	mkdir -p $(BIN_DIR)
